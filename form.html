@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add/Edit Employee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body id="form-body">
+  <div id="form-container">
+    <h1>Add Employee</h1>
+    <form id="employeeForm">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" required />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" required />
+
+      <div id="flex">
+        <div style="flex: 1; margin-right: 10px;">
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div style="flex: 1;">
+          <label for="department">Department</label>
+          <select name="department" required>
+            <option value="">Select Department</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Sales">Sales</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="role">Role</label>
+      <select name="role" required>
+        <option value="">Select Role</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Manager">Manager</option>
+        <option value="Recruiter">Recruiter</option>
+        <option value="Analyst">Analyst</option>
+      </select>
+
+      <div id="btn-container">
+        <button type="button" onclick="location.href='index.html'">Cancel</button>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../assets/js/form.js"></script>
+</body>
+</html>

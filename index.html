@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Employee Directory</h1>
+    <input type="text" id="searchInput" placeholder="Search by name or email..." />
+    <button onclick="location.href='form.html'">Add Employee</button>
+
+  </header>
+
+
+ <div id="sort-page-container">
+  <div class="pagination-controls">
+    <select id="sortBy">
+          <option value="">Sort By</option>
+          <option value="firstName">First Name</option>
+          <option value="department">Department</option>
+    </select>
+    <label>Show:
+      <select id="pageSize">
+        <option>10</option>
+        <option>25</option>
+        <option>50</option>
+        <option>100</option>
+      </select>
+    </label>
+
+    <span id="pageInfo"></span>
+    <button onclick="prevPage()">Prev</button>
+    <button onclick="nextPage()">Next</button>
+  </div>
+  <aside>
+      <h3>Filter Employee</h3>
+      <input type="text" id="filterName" placeholder="Filter by First Name" /><br/>
+      <input type="text" id="filterDept" placeholder="Filter by Department" /><br/>
+      <input type="text" id="filterRole" placeholder="Filter by Role" /><br/>
+      <button onclick="applyFilters()">Apply</button>
+      <button onclick="clearFilters()">Clear</button>
+    </aside>
+  </div>
+
+  <main id="employeeList">
+          <div class="employee-card">
+        <h3>Jyoti Swain</h3>
+        <p>Email: jyoti@example.com</p>
+        <p>Department: Engineering</p>
+        <p>Role: Frontend Developer</p>
+        <button onclick="location.href='form.html?id=610769b4-04fa-4add-a7f2-9e8e601869a8'">Edit</button>
+        <button onclick="remove('610769b4-04fa-4add-a7f2-9e8e601869a8')">Delete</button>
+      </div>
+      <div class="employee-card">
+        <h3>Rahul Verma</h3>
+        <p>Email: rahul@example.com</p>
+        <p>Department: Sales</p>
+        <p>Role: Manager</p>
+        <button onclick="location.href='form.html?id=fa095506-b20a-4dd8-91ba-39ca67fac052'">Edit</button>
+        <button onclick="remove('fa095506-b20a-4dd8-91ba-39ca67fac052')">Delete</button>
+      </div>
+      <div class="employee-card">
+        <h3>Anita Patel</h3>
+        <p>Email: anita@example.com</p>
+        <p>Department: HR</p>
+        <p>Role: Recruiter</p>
+        <button onclick="location.href='form.html?id=42971f25-2d07-4cba-b125-0effaa366a91'">Edit</button>
+        <button onclick="remove('42971f25-2d07-4cba-b125-0effaa366a91')">Delete</button>
+      </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Employee Directory App. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
